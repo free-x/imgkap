@@ -1975,6 +1975,8 @@ int imgtokap(int typein,char *filein, double lat0, double lon0, int pixpos0x, in
     {
         fprintf(out,"PLY/%u,%f,%f\r\n",i+1,plylat[i],plylon[i]);
     }
+    //Fix: Close Polygon
+    fprintf(out,"PLY/%u,%f,%f\r\n",i+1,plylat[0],plylon[0]);
     //ToDo
     //fprintf(out,"WPX/2...,...\r\n");
     //fprintf(out,"WPY/2...,...\r\n");
